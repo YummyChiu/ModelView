@@ -1,0 +1,206 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{287247A9-817B-ADB0-FBF2-AD29965B3255}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
+    <CompilerResponseFile></CompilerResponseFile>
+    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityBuildTarget>Android:13</UnityBuildTarget>
+    <UnityVersion>5.5.1f1</UnityVersion>
+    <RootNamespace></RootNamespace>
+    <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Debug\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Debug\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_5_1;UNITY_5_5;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_GENERICS;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;UNITY_ANDROID;ENABLE_SUBSTANCE;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;PLATFORM_SUPPORTS_ADS_ID;UNITY_CAN_SHOW_SPLASH_SCREEN;ENABLE_VIDEO;ENABLE_VR;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;ENABLE_VSTU</DefineConstants>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Release\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Release\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_5_1;UNITY_5_5;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_GENERICS;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;UNITY_ANDROID;ENABLE_SUBSTANCE;UNITY_ANDROID_API;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;PLATFORM_SUPPORTS_ADS_ID;UNITY_CAN_SHOW_SPLASH_SCREEN;ENABLE_VIDEO;ENABLE_VR;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;ENABLE_VSTU</DefineConstants>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="Boo.Lang" />
+    <Reference Include="UnityScript.Lang" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PlaymodeTestsRunner">
+      <HintPath>Library\UnityAssemblies\UnityEngine.PlaymodeTestsRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Analytics">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HoloLens">
+      <HintPath>Library\UnityAssemblies\UnityEngine.HoloLens.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VR">
+      <HintPath>Library\UnityAssemblies\UnityEngine.VR.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>Library\UnityAssemblies\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="CutGLib">
+      <HintPath>Assets\Plugins\CutGLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Data.Sqlite">
+      <HintPath>Assets\Plugins\Mono.Data.Sqlite.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Assets\Plugins\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>Assets\Plugins\System.Data.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="ModelView.Plugins.csproj">
+      <Project>{940F79F7-03B8-7B93-419C-EC682592E08E}</Project>
+      <Name>ModelView.Plugins</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Hello.cs" />
+    <Compile Include="Assets\SLS\Widgets\Table\BodyRect.cs" />
+    <Compile Include="Assets\SLS\Widgets\Table\Cell.cs" />
+    <Compile Include="Assets\SLS\Widgets\Table\Column.cs" />
+    <Compile Include="Assets\SLS\Widgets\Table\Control.cs" />
+    <Compile Include="Assets\SLS\Widgets\Table\Datum.cs" />
+    <Compile Include="Assets\SLS\Widgets\Table\Factory.cs" />
+    <Compile Include="Assets\SLS\Widgets\Table\HeaderCell.cs" />
+    <Compile Include="Assets\SLS\Widgets\Table\InputCell.cs" />
+    <Compile Include="Assets\SLS\Widgets\Table\MeasureMaster.cs" />
+    <Compile Include="Assets\SLS\Widgets\Table\Row.cs" />
+    <Compile Include="Assets\SLS\Widgets\Table\Samples\AutoUpdating.cs" />
+    <Compile Include="Assets\SLS\Widgets\Table\Samples\AutoUpdatingAll.cs" />
+    <Compile Include="Assets\SLS\Widgets\Table\Samples\DataTable.cs" />
+    <Compile Include="Assets\SLS\Widgets\Table\Samples\DataTableData.cs" />
+    <Compile Include="Assets\SLS\Widgets\Table\Samples\DragPanel.cs" />
+    <Compile Include="Assets\SLS\Widgets\Table\Samples\KitchenSink.cs" />
+    <Compile Include="Assets\SLS\Widgets\Table\Samples\Simple.cs" />
+    <Compile Include="Assets\SLS\Widgets\Table\ScrollWatcher.cs" />
+    <Compile Include="Assets\SLS\Widgets\Table\Spinner.cs" />
+    <Compile Include="Assets\SLS\Widgets\Table\Table.cs" />
+    <Compile Include="Assets\Scripts\BuildInOrder.cs" />
+    <Compile Include="Assets\Scripts\CameraController.cs" />
+    <Compile Include="Assets\Scripts\Com\Logical\CompoentCount.cs" />
+    <Compile Include="Assets\Scripts\Com\UI\UTree.cs" />
+    <Compile Include="Assets\Scripts\Com\UI\UTreeBaseItem.cs" />
+    <Compile Include="Assets\Scripts\Com\UI\UTreeBranch.cs" />
+    <Compile Include="Assets\Scripts\Com\UI\UTreeLeaf.cs" />
+    <Compile Include="Assets\Scripts\Com\UI\UTreeNodeData.cs" />
+    <Compile Include="Assets\Scripts\ComponentInfo.cs" />
+    <Compile Include="Assets\Scripts\FilesPanel.cs" />
+    <Compile Include="Assets\Scripts\FormModel\Commons.cs" />
+    <Compile Include="Assets\Scripts\FormModel\Floors.cs" />
+    <Compile Include="Assets\Scripts\FormModel\Frameworks.cs" />
+    <Compile Include="Assets\Scripts\FormModel\Structures.cs" />
+    <Compile Include="Assets\Scripts\FormModel\Walls.cs" />
+    <Compile Include="Assets\Scripts\GameEntry.cs" />
+    <Compile Include="Assets\Scripts\GetModel\Compoent.cs" />
+    <Compile Include="Assets\Scripts\GetModel\ModelID.cs" />
+    <Compile Include="Assets\Scripts\GetModel\ModelMessage.cs" />
+    <Compile Include="Assets\Scripts\GetModel\ReadModelSQLite.cs" />
+    <Compile Include="Assets\Scripts\GetModel\ReadModelXML.cs" />
+    <Compile Include="Assets\Scripts\GetModel\SQLiteTools.cs" />
+    <Compile Include="Assets\Scripts\GetModel\Triangles.cs" />
+    <Compile Include="Assets\Scripts\GetModel\VerticesAndNormals.cs" />
+    <Compile Include="Assets\Scripts\GetModel\myMesh.cs" />
+    <Compile Include="Assets\Scripts\GetRebarInfo.cs" />
+    <Compile Include="Assets\Scripts\JsonExtensions.cs" />
+    <Compile Include="Assets\Scripts\LoginManager.cs" />
+    <Compile Include="Assets\Scripts\MenuManager.cs" />
+    <Compile Include="Assets\Scripts\MessageBox\DialogResult.cs" />
+    <Compile Include="Assets\Scripts\MessageBox\MenuBox.cs" />
+    <Compile Include="Assets\Scripts\MessageBox\MessageBox.cs" />
+    <Compile Include="Assets\Scripts\MessageBox\MessageBoxButtons.cs" />
+    <Compile Include="Assets\Scripts\MessageBox\MessageBoxExample.cs" />
+    <Compile Include="Assets\Scripts\MessageBox\ModalBox.cs" />
+    <Compile Include="Assets\Scripts\Modules\Test.cs" />
+    <Compile Include="Assets\Scripts\Modules\test1.cs" />
+    <Compile Include="Assets\Scripts\MyCutLib.cs" />
+    <Compile Include="Assets\Scripts\MyCutRebar.cs" />
+    <Compile Include="Assets\Scripts\MyRebar.cs" />
+    <Compile Include="Assets\Scripts\OpenFileName.cs" />
+    <Compile Include="Assets\Scripts\RebarPanelActive.cs" />
+    <Compile Include="Assets\Scripts\SameLength.cs" />
+    <Compile Include="Assets\Scripts\TTUIBind.cs" />
+    <Compile Include="Assets\Scripts\TTUIPage.cs" />
+    <Compile Include="Assets\Scripts\TTUIRoot.cs" />
+    <Compile Include="Assets\Scripts\Task.cs" />
+    <Compile Include="Assets\Scripts\Toggles.cs" />
+    <Compile Include="Assets\Scripts\Tools.cs" />
+    <Compile Include="Assets\Scripts\ToolsClass.cs" />
+    <Compile Include="Assets\Scripts\UI\DelayToInvoke.cs" />
+    <Compile Include="Assets\Scripts\UI\FilterTreeView.cs" />
+    <Compile Include="Assets\Scripts\UI\FixedLengthSetting.cs" />
+    <Compile Include="Assets\Scripts\UI\InvisibleBGCtrl.cs" />
+    <Compile Include="Assets\Scripts\UI\MenuVisibilityCtrl.cs" />
+    <Compile Include="Assets\Scripts\UI\RebarTableControl.cs" />
+    <Compile Include="Assets\Scripts\UI\RebarTreeView.cs" />
+    <Compile Include="Assets\Scripts\UI\ScrollviewAdjust.cs" />
+    <Compile Include="Assets\Scripts\UI\TableControl.cs" />
+    <Compile Include="Assets\Scripts\UI\ToggleSelectItem.cs" />
+    <Compile Include="Assets\Scripts\UI\TreeView.cs" />
+    <Compile Include="Assets\Scripts\UIPanels\UICompoentInfo.cs" />
+    <Compile Include="Assets\Scripts\UIPanels\UIFilesPanel.cs" />
+    <Compile Include="Assets\Scripts\UIPanels\UILogin.cs" />
+    <Compile Include="Assets\Scripts\UIPanels\UIMenuPanel.cs" />
+    <Compile Include="Assets\Scripts\UIPanels\UIUserInfoPanel.cs" />
+    <Compile Include="Assets\Scripts\switchAlpha.cs" />
+    <Compile Include="Assets\UIManger.cs" />
+    <Compile Include="Assets\UserInfo.cs" />
+    <Compile Include="Assets\testcookie.cs" />
+    <Compile Include="Assets\testmessage.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Plugins\FingerGestures\Readme.txt" />
+    <None Include="Assets\Resources\38XML\38#结构模型.xml" />
+    <None Include="Assets\Resources\38XML\38#结构模型模型信息.xml" />
+    <None Include="Assets\Resources\38XML\38#结构模型清单规则.xml" />
+    <None Include="Assets\Resources\38XML\38#结构模型算量信息.xml" />
+    <None Include="Assets\Resources\38XML\38#结构模型算量设置.xml" />
+    <None Include="Assets\Resources\Materials\BVShader.shader" />
+    <None Include="Assets\Resources\Materials\BVShader2.shader" />
+    <None Include="Assets\Resources\Materials\BVShader3.shader" />
+    <None Include="Assets\SLS\Widgets\Table\ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="GenerateTargetFrameworkMonikerAttribute" />
+</Project>
