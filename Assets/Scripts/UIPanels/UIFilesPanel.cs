@@ -255,7 +255,7 @@ public class UIFilesPanel : TTUIPage
         }
     }
 
-    void CreatFile(string path, string name, byte[] info, int length)
+   public  void CreatFile(string path, string name, byte[] info, int length)
     {
         Stream sw;
         FileInfo fi = new FileInfo(path + "//" + name);

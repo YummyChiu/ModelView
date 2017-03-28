@@ -24,9 +24,10 @@ public class GameEntry : MonoBehaviour {
         r.LoadModel();
     }
 	void Start () {
-        
-       // TTUIPage.ShowPage<UILogin>();
-        //TTUIPage.ShowPage<UICompoentInfo>();
+
+         TTUIPage.ShowPage<UILogin>();
+       // TTUIPage.ShowPage<UICompoentInfo>();
+       //TTUIPage.ShowPage<UIIssuePanel>("[871714]");
     }
 	
 

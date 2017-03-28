@@ -20,6 +20,9 @@ public class Tools :MonoBehaviour
     public static string FilesFolder = "files";
 
     public static string ConfigFolder = "config";
+    public static string TempFolder = "temp";
+
+
 
     public static string WebUrl = "http://192.168.0.130:8086/";
 
@@ -139,6 +142,24 @@ public class Tools :MonoBehaviour
         XmlNode xn = xmlDoc.SelectSingleNode("Setting/CurrentFile");
         string path = xn.InnerText;
         return path;
+    }
+
+    public void CreateFile(string path,string name,byte[] bytes,int length)
+    {
+        Stream sw;
+        FileInfo fi = new FileInfo(path + "//" + name);
+        if (!fi.Exists)
+        {
+            sw = fi.Create();
+        }
+        else {
+            Debug.Log(name + "is existed in the " + "-------" + path);
+            return;
+        }
+        sw.Write(bytes, 0, length);
+        sw.Close();
+        sw.Dispose();
+        Debug.Log(name + "is saved to the" + "--------" + path);
     }
 }
 

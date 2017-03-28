@@ -1107,7 +1107,9 @@ public class myMesh : MonoBehaviour, IPointerDownHandler
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        TTUIPage.ShowPage<UICompoentInfo>(modelMessage.Id);
+       TTUIPage.ShowPage<UICompoentInfo>(modelMessage.Id);
+        //TTUIPage.ShowPage<UICompoentInfo>("871714");
+
     }
     //void IPointerClickHandler.OnPointerClick(PointerEventData eventData)
     //{
