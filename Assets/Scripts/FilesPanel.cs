@@ -204,7 +204,7 @@ public class FilesPanel : MonoBehaviour
 
                 byte[] f = data.bytes;
                 int length = f.Length;
-                CreatFile(Tools.Instance.SavedPath + "//" + Tools.BaseFolder + "//" + Tools.FilesFolder, file.FileName, f, length);
+                CreatFile(Tools.Instance.SavedPath + "/" + Tools.BaseFolder + "/" + Tools.FilesFolder, file.FileName, f, length);
                 internetFilesTable.data[row].elements[col].value = ((int)ResourceStatus.DOWNLOADED).ToString();
 
             }
@@ -220,7 +220,7 @@ public class FilesPanel : MonoBehaviour
     void CreatFile(string path, string name, byte[] info, int length)
     {
         Stream sw;
-        FileInfo fi = new FileInfo(path + "//" + name);
+        FileInfo fi = new FileInfo(path + "/" + name);
         if (!fi.Exists)
         {
             sw = fi.Create();

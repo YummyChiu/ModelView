@@ -127,34 +127,8 @@
     <Compile Include="Assets\Plugins\FingerGestures\Scripts\Toolbox\TBTwistToRotate.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Extensions\AndroidManifestManager\default.xml" />
-    <None Include="Assets\Extensions\AndroidNative\Documentation\AN_VersionNotes.txt" />
-    <None Include="Assets\Plugins\Android\AN_Res\AndroidManifest.xml" />
-    <None Include="Assets\Plugins\Android\AN_Res\res\values\analytics.xml" />
-    <None Include="Assets\Plugins\Android\AN_Res\res\values\ids.xml" />
-    <None Include="Assets\Plugins\Android\AN_Res\res\values\version.xml" />
-    <None Include="Assets\Plugins\Android\AN_Res\res\xml\file_paths.xml" />
     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
     <None Include="Assets\Plugins\FingerGestures\Readme.txt" />
-    <None Include="Assets\Plugins\StansAssets\Android\AN_Res\AndroidManifest.xml" />
-    <None Include="Assets\Plugins\StansAssets\Android\AN_Res\res\values\analytics.xml" />
-    <None Include="Assets\Plugins\StansAssets\Android\AN_Res\res\values\ids.xml" />
-    <None Include="Assets\Plugins\StansAssets\Android\AN_Res\res\values\version.xml" />
-    <None Include="Assets\Plugins\StansAssets\Android\AN_Res\res\xml\file_paths.xml" />
-    <None Include="Assets\Plugins\StansAssets\Android\AndroidManifest.xml" />
-    <None Include="Assets\Plugins\StansAssets\Android\OneSignalSDK.txt" />
-    <None Include="Assets\Plugins\StansAssets\Android\androidnative.txt" />
-    <None Include="Assets\Plugins\StansAssets\Android\app_licensing\an_licensing_library.txt" />
-    <None Include="Assets\Plugins\StansAssets\Android\billing\an_billing.txt" />
-    <None Include="Assets\Plugins\StansAssets\Android\google_play\an_googleplay.txt" />
-    <None Include="Assets\Plugins\StansAssets\Android\google_play\google-play-services.txt" />
-    <None Include="Assets\Plugins\StansAssets\Android\libs\an_sa_soomla.txt" />
-    <None Include="Assets\Plugins\StansAssets\Android\libs\android-support-v4.txt" />
-    <None Include="Assets\Plugins\StansAssets\Android\libs\image-chooser-library-1.3.0.txt" />
-    <None Include="Assets\Plugins\StansAssets\Android\social\an_social.txt" />
-    <None Include="Assets\Plugins\StansAssets\Android\social\twitter4j-core-3.0.5.txt" />
-    <None Include="Assets\Plugins\StansAssets\Versions\AN_VersionInfo.txt" />
-    <None Include="Assets\Plugins\StansAssets\Versions\MSP_VersionInfo.txt" />
     <None Include="Assets\Resources\38XML\38#结构模型.xml" />
     <None Include="Assets\Resources\38XML\38#结构模型模型信息.xml" />
     <None Include="Assets\Resources\38XML\38#结构模型清单规则.xml" />
@@ -163,6 +137,7 @@
     <None Include="Assets\Resources\Materials\BVShader.shader" />
     <None Include="Assets\Resources\Materials\BVShader2.shader" />
     <None Include="Assets\Resources\Materials\BVShader3.shader" />
+    <None Include="Assets\Resources\国标清单2013.xml" />
     <None Include="Assets\SLS\Widgets\Table\ReadMe.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

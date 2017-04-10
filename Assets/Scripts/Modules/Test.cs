@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using Com.UI;
 using System.Runtime.InteropServices;
-using UnityEngine.UI;
 using System;
 using System.IO;
 

@@ -17,7 +17,9 @@ namespace Com.UI {
         public Action<UTreeNodeData, bool> OnLeafSel;
 
         public UTreeLeaf() {
-            go = GameObject.Instantiate(Resources.Load("Prefabs/treeLeaf", typeof(GameObject))) as GameObject;
+            //go = GameObject.Instantiate(Resources.Load("Prefabs/treeLeaf", typeof(GameObject))) as GameObject;
+            go = GameObject.Instantiate(Resources.Load("Prefabs/Leaf", typeof(GameObject))) as GameObject;
+
             tran = go.transform;
             toggle = go.GetComponentInChildren<Toggle>();
             textTitle = toggle.GetComponentInChildren<Text>();
@@ -65,7 +67,7 @@ namespace Com.UI {
             //} else {
             //    Debug.Log(" Nleaf " + data.Title);
             //}
-            Debug.Log("leaf  " + data.Title + isSel);
+            //Debug.Log("leaf  " + data.Title + isSel);
             isInvokeInner = false;
             //data.Check = isSel;
 

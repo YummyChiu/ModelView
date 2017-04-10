@@ -141,7 +141,7 @@ public class ReadModelSQLite : MonoBehaviour
                 {
                     ModelMessage mm = new ModelMessage();
                     mm.Name = dr1.GetString(2);
-                    mm.Id = dr1.GetInt32(3);
+                    mm.Id = id;
                     mm.Vertices = verticesList.ToArray();
                     mm.Normals = normalsList.ToArray();
                     mm.Triangles = triList.ToArray();
@@ -719,7 +719,10 @@ public class ReadModelSQLite : MonoBehaviour
             //mygoMesh.DrawModel(m.Id, m.Name, m.Triangles, m.Vertices, m.Normals, conn);//调用物体的本身组件的方法，把物体的形状绘制出来
             goList.Add(myGo);//把所有物体添加到一个集合里面，以便以后查询或调用等等。
             myGo.tag = "Player";
-            myGo.transform.localEulerAngles = new Vector3(270, 0, 0);
+            // myGo.transform.localEulerAngles = new Vector3(270, 0, 0);
+            myGo.transform.localScale = new Vector3(-1, 1, 1);
+            myGo.transform.Rotate(-90, 0, 0);
+
             myGo.transform.parent = myModelCenter.transform;
         }
         sliderText.text = "模型生成完毕！";
@@ -728,6 +731,7 @@ public class ReadModelSQLite : MonoBehaviour
         //DestroyImmediate(tempScripts);
         conn.Close();
         conn.Dispose();
+        UnityEngine.Debug.Log("模型的构件数量为："+ goList.Count);
         //   tran.Commit();
     }
 
@@ -743,7 +747,7 @@ public class ReadModelSQLite : MonoBehaviour
 
     public void DestoryGameObjects()
     {
-
+        goList.Clear();
         foreach (Transform child in myModelCenter.transform)
         {
             GameObject.Destroy(child.gameObject);

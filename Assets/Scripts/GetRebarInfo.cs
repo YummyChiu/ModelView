@@ -7,7 +7,7 @@ using System;
 
 public class GetRebarInfo {
 
-    //public static string defaultPath = @"E:\UnityProjects\20161118\Messages\";
+    public static string defaultPath = @"D:\WorkProjects\Unity\ModelView\Messages\";
 
     public static List<MyRebar> GetRebar()
     {
@@ -16,9 +16,9 @@ public class GetRebarInfo {
         List<MyRebar> myRebars = new List<MyRebar>();
         //List<MyRebar> AfterAddCardNumList = new List<MyRebar>() { };
         int end = 0;
-        string temp = ReadModelXML._instance.strGeometryPath;
-       // string path = defaultPath  +"模型.xml";
-        string path = temp.Substring(0, temp.LastIndexOf('\\') + 1) + "模型.xml";
+       // string temp = ReadModelXML._instance.strGeometryPath;
+        string path = defaultPath  +"模型.xml";
+        //string path = temp.Substring(0, temp.LastIndexOf('\\') + 1) + "模型.xml";
 
         //bool isFileExisted = File.Exists(defaultPath + "；模型.xml");
         bool isFileExisted = File.Exists(path);

@@ -23,9 +23,9 @@ public class Tools :MonoBehaviour
     public static string TempFolder = "temp";
 
 
-
-    public static string WebUrl = "http://192.168.0.130:8086/";
-
+    public static string TakePhotoFolder = "Pictures/ModleView";
+    // public static string WebUrl = "http://192.168.0.149:80/";
+    public static string WebUrl = "";
     public static string UserFile = "user.bin";
 
     public static string ConfigFile = "setting.xml";
@@ -71,6 +71,8 @@ public class Tools :MonoBehaviour
             Directory.CreateDirectory(SavedPath + "/" + BaseFolder + "/" + UserFolder);
         if (!Directory.Exists(SavedPath + "/" + BaseFolder + "/" + FilesFolder))
             Directory.CreateDirectory(SavedPath + "/" + BaseFolder + "/" + FilesFolder);
+        if (!Directory.Exists(SavedPath + "/" + BaseFolder + "/" + FilesFolder +"/"+TempFolder))
+            Directory.CreateDirectory(SavedPath + "/" + BaseFolder + "/" + FilesFolder + "/" + TempFolder);
         if (!Directory.Exists(SavedPath + "/" + BaseFolder + "/" + ConfigFolder))
             Directory.CreateDirectory(SavedPath + "/" + BaseFolder + "/" + ConfigFolder);
 
@@ -141,13 +143,14 @@ public class Tools :MonoBehaviour
         xmlDoc.Load(SavedPath + "/" + Tools.BaseFolder + "/" + Tools.ConfigFolder + "/" + Tools.ConfigFile);
         XmlNode xn = xmlDoc.SelectSingleNode("Setting/CurrentFile");
         string path = xn.InnerText;
+        Debug.Log("当前读取的数据的路径："+path);
         return path;
     }
 
     public void CreateFile(string path,string name,byte[] bytes,int length)
     {
         Stream sw;
-        FileInfo fi = new FileInfo(path + "//" + name);
+        FileInfo fi = new FileInfo(path + "/" + name);
         if (!fi.Exists)
         {
             sw = fi.Create();

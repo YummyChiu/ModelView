@@ -48,7 +48,11 @@ public class UIMenuPanel : TTUIPage
 
     private void OnClickCount()
     {
-
+        //GameObject root = GameObject.Find("Canvas");
+        //GameObject go = root.transform.Find("ResultFilterPanel").gameObject;
+        ////GameObject go =  GameObject.FindGameObjectWithTag("Filter");
+        //go.SetActive(true);
+        ShowPage<UICountFilter>();
     }
     private void OnClickRebar()
     {
@@ -56,7 +60,10 @@ public class UIMenuPanel : TTUIPage
     }
     private void OnClickFilter()
     {
-
+        GameObject root = GameObject.Find("Canvas");
+        GameObject go = root.transform.Find("FilterPanel").gameObject;
+       //GameObject go =  GameObject.FindGameObjectWithTag("Filter");
+       go.SetActive(true);
     }
     private void OnClickProgress()
     {

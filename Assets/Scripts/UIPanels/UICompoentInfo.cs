@@ -66,8 +66,10 @@ public class UICompoentInfo : TTUIPage
             GameObject.Destroy(tr.gameObject);
         }
         //string id = data.ToString();
+        if (data == null)
+            return;
         componentId = data.ToString();
-
+        Name.text = data.ToString();
         SqliteConnection conn = Tools.Instance.SqlConnection();
 
         SqliteCommand cmd = conn.CreateCommand();
@@ -161,6 +163,7 @@ public class UICompoentInfo : TTUIPage
 
     private void OnClickShowIssuePanel()
     {
-        TTUIPage.ShowPage<UIIssuePanel>("[871714]");
+        // TTUIPage.ShowPage<UIIssuePanel>("871714");
+        TTUIPage.ShowPage<UIIssuePanel>(componentId);
     }
 }

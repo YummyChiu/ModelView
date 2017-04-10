@@ -10,7 +10,8 @@ using Mono.Data.Sqlite;
 using System;
 using TinyTeam.UI;
 
-public class myMesh : MonoBehaviour, IPointerDownHandler
+//, IPointerDownHandler
+public class myMesh : MonoBehaviour,IPointerDownHandler
 {
     private Mesh mesh;
 
@@ -1107,10 +1108,12 @@ public class myMesh : MonoBehaviour, IPointerDownHandler
 
     public void OnPointerDown(PointerEventData eventData)
     {
-       TTUIPage.ShowPage<UICompoentInfo>(modelMessage.Id);
+        Debug.Log("按下");
+        TTUIPage.ShowPage<UICompoentInfo>(modelMessage.Id);
         //TTUIPage.ShowPage<UICompoentInfo>("871714");
 
     }
+
     //void IPointerClickHandler.OnPointerClick(PointerEventData eventData)
     //{
     //    Debug.Log("click");
