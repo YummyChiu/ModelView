@@ -93,6 +93,7 @@ public class RebarTableControl : MonoBehaviour
             mergeName.elements.Add("");// 备注
             mergeName.elements[0].color = Color.red;
             table.data.Add(mergeName);
+            Sprite s = Resources.Load<Sprite>("") as Sprite; 
 
             #endregion
             foreach (var item in items)
@@ -103,7 +104,9 @@ public class RebarTableControl : MonoBehaviour
                 rows.elements.Add(j.ToString());//序号
                 rows.elements.Add(item.First().CardNum);//料牌编号
                 rows.elements.Add(item.First().Name);//钢筋规格
+
                 rows.elements.Add(item.First().Shape);//钢筋形状
+
                 rows.elements.Add(item.First().Length.ToString());//断料长度（mm）
                 rows.elements.Add(item.Sum(a => a.Quantity).ToString());//总数（根）
                 rows.elements.Add("1");//总重（kg）
@@ -120,6 +123,7 @@ public class RebarTableControl : MonoBehaviour
         _myRebars = rebars;
         table = transform.GetComponentInChildren<Table>();
         table.ResetTable();
+        table.AddTextColumn("dfadf",null, 100.0f,200.0f);
         table.AddTextColumn("序号").horAlignment = Column.HorAlignment.CENTER;
         table.AddTextColumn("料牌编号").horAlignment = Column.HorAlignment.CENTER;
         table.AddTextColumn("钢筋规格").horAlignment = Column.HorAlignment.CENTER;
@@ -205,7 +209,7 @@ public class RebarTableControl : MonoBehaviour
         mergeSums.elements.Add();//备注
         table.data.Add(mergeSums);
         table.StartRenderEngine();
-        RebarSummaryBtn.GetComponent<Image>().enabled = true;
+        //RebarSummaryBtn.GetComponent<Image>().enabled = true;
     }
 
     private void RebarCompoentTable()

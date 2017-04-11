@@ -24,9 +24,16 @@ public class GameEntry : MonoBehaviour {
         r.LoadModel();
     }
 	void Start () {
-        
-       // TTUIPage.ShowPage<UILogin>();
-        //TTUIPage.ShowPage<UICompoentInfo>();
+        //TreeData.Instance.Test(6);
+
+        TTUIPage.ShowPage<UIMenuPanel>();
+
+        ReadModelSQLite.Instance.LoadModel();
+        //TTUIPage.ShowPage<UILogin>();
+        // TTUIPage.ShowPage<UICompoentInfo>();
+        // TTUIPage.ShowPage<UIIssuePanel>("[871714]");
+
+        //TTUIPage.ShowPage<UICountFilter>();
     }
 	
 

@@ -71,10 +71,16 @@ public class UIUserInfoPanel : TTUIPage
 
     private void OnClickSignout()
     {
-        ReadModelSQLite.Instance.DestoryGameObjects();
+        ClosePage();
+        ClosePage<UICompoentInfo>();
         ClosePage<UIUserInfoPanel>();
         ClosePage<UIMenuPanel>();
-        ShowPage<UILogin>();
+
+        ReadModelSQLite.Instance.DestoryGameObjects();
+       
+       // ClosePage<UIUserInfoPanel>();
+        //ClosePage<UIMenuPanel>();
+        TTUIPage.ShowPage<UILogin>();
     }
 
 }

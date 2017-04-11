@@ -96,6 +96,25 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\FingerGestures Samples\1) Finger Events\Scripts\FingerEventsSamplePart1.cs" />
+    <Compile Include="Assets\FingerGestures Samples\1) Finger Events\Scripts\FingerEventsSamplePart2.cs" />
+    <Compile Include="Assets\FingerGestures Samples\2) Gestures\Scripts\BasicGesturesSample.cs" />
+    <Compile Include="Assets\FingerGestures Samples\2) Gestures\Scripts\PinchTwistSample.cs" />
+    <Compile Include="Assets\FingerGestures Samples\2) Gestures\Scripts\PointCloudGestureRenderer.cs" />
+    <Compile Include="Assets\FingerGestures Samples\2) Gestures\Scripts\PointCloudGestureSample.cs" />
+    <Compile Include="Assets\FingerGestures Samples\3) Toolbox\Scripts\DragTrail.cs" />
+    <Compile Include="Assets\FingerGestures Samples\3) Toolbox\Scripts\EmitParticlesOnSwipe.cs" />
+    <Compile Include="Assets\FingerGestures Samples\3) Toolbox\Scripts\ToolboxDragSample.cs" />
+    <Compile Include="Assets\FingerGestures Samples\3) Toolbox\Scripts\ToolboxFingerEventsSample.cs" />
+    <Compile Include="Assets\FingerGestures Samples\3) Toolbox\Scripts\ToolboxOneFingerGestureSample.cs" />
+    <Compile Include="Assets\FingerGestures Samples\Assets\Scripts\BasicSample.cs" />
+    <Compile Include="Assets\FingerGestures Samples\Assets\Scripts\EmitParticles.cs" />
+    <Compile Include="Assets\FingerGestures Samples\Assets\Scripts\MaxFPS.cs" />
+    <Compile Include="Assets\FingerGestures Samples\Assets\Scripts\MenuNode.cs" />
+    <Compile Include="Assets\FingerGestures Samples\Assets\Scripts\SampleBase.cs" />
+    <Compile Include="Assets\FingerGestures Samples\Assets\Scripts\SampleUI.cs" />
+    <Compile Include="Assets\FingerGestures Samples\Assets\Scripts\StartMenu.cs" />
+    <Compile Include="Assets\FingerGestures Samples\Assets\Scripts\SwipeParticlesEmitter.cs" />
     <Compile Include="Assets\Hello.cs" />
     <Compile Include="Assets\SLS\Widgets\Table\BodyRect.cs" />
     <Compile Include="Assets\SLS\Widgets\Table\Cell.cs" />
@@ -117,6 +136,7 @@
     <Compile Include="Assets\SLS\Widgets\Table\ScrollWatcher.cs" />
     <Compile Include="Assets\SLS\Widgets\Table\Spinner.cs" />
     <Compile Include="Assets\SLS\Widgets\Table\Table.cs" />
+    <Compile Include="Assets\Scripts\AndroidCamera.cs" />
     <Compile Include="Assets\Scripts\BuildInOrder.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Com\Logical\CompoentCount.cs" />
@@ -126,6 +146,7 @@
     <Compile Include="Assets\Scripts\Com\UI\UTreeLeaf.cs" />
     <Compile Include="Assets\Scripts\Com\UI\UTreeNodeData.cs" />
     <Compile Include="Assets\Scripts\ComponentInfo.cs" />
+    <Compile Include="Assets\Scripts\Data\TreeData.cs" />
     <Compile Include="Assets\Scripts\FilesPanel.cs" />
     <Compile Include="Assets\Scripts\FormModel\Commons.cs" />
     <Compile Include="Assets\Scripts\FormModel\Floors.cs" />
@@ -143,6 +164,7 @@
     <Compile Include="Assets\Scripts\GetModel\VerticesAndNormals.cs" />
     <Compile Include="Assets\Scripts\GetModel\myMesh.cs" />
     <Compile Include="Assets\Scripts\GetRebarInfo.cs" />
+    <Compile Include="Assets\Scripts\ImgToSprite.cs" />
     <Compile Include="Assets\Scripts\JsonExtensions.cs" />
     <Compile Include="Assets\Scripts\LoginManager.cs" />
     <Compile Include="Assets\Scripts\MenuManager.cs" />
@@ -158,12 +180,16 @@
     <Compile Include="Assets\Scripts\MyCutRebar.cs" />
     <Compile Include="Assets\Scripts\MyRebar.cs" />
     <Compile Include="Assets\Scripts\OpenFileName.cs" />
+    <Compile Include="Assets\Scripts\QMonoSingleton.cs" />
     <Compile Include="Assets\Scripts\RebarPanelActive.cs" />
     <Compile Include="Assets\Scripts\SameLength.cs" />
+    <Compile Include="Assets\Scripts\Singleton.cs" />
     <Compile Include="Assets\Scripts\TTUIBind.cs" />
     <Compile Include="Assets\Scripts\TTUIPage.cs" />
     <Compile Include="Assets\Scripts\TTUIRoot.cs" />
     <Compile Include="Assets\Scripts\Task.cs" />
+    <Compile Include="Assets\Scripts\TestScripts\TestPhoto.cs" />
+    <Compile Include="Assets\Scripts\TestScripts\TestSheet.cs" />
     <Compile Include="Assets\Scripts\Toggles.cs" />
     <Compile Include="Assets\Scripts\Tools.cs" />
     <Compile Include="Assets\Scripts\ToolsClass.cs" />
@@ -179,7 +205,10 @@
     <Compile Include="Assets\Scripts\UI\ToggleSelectItem.cs" />
     <Compile Include="Assets\Scripts\UI\TreeView.cs" />
     <Compile Include="Assets\Scripts\UIPanels\UICompoentInfo.cs" />
+    <Compile Include="Assets\Scripts\UIPanels\UICountFilter.cs" />
+    <Compile Include="Assets\Scripts\UIPanels\UICountTable.cs" />
     <Compile Include="Assets\Scripts\UIPanels\UIFilesPanel.cs" />
+    <Compile Include="Assets\Scripts\UIPanels\UIIssuePanel.cs" />
     <Compile Include="Assets\Scripts\UIPanels\UILogin.cs" />
     <Compile Include="Assets\Scripts\UIPanels\UIMenuPanel.cs" />
     <Compile Include="Assets\Scripts\UIPanels\UIUserInfoPanel.cs" />
@@ -190,6 +219,7 @@
     <Compile Include="Assets\testmessage.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
     <None Include="Assets\Plugins\FingerGestures\Readme.txt" />
     <None Include="Assets\Resources\38XML\38#结构模型.xml" />
     <None Include="Assets\Resources\38XML\38#结构模型模型信息.xml" />
@@ -199,6 +229,7 @@
     <None Include="Assets\Resources\Materials\BVShader.shader" />
     <None Include="Assets\Resources\Materials\BVShader2.shader" />
     <None Include="Assets\Resources\Materials\BVShader3.shader" />
+    <None Include="Assets\Resources\国标清单2013.xml" />
     <None Include="Assets\SLS\Widgets\Table\ReadMe.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

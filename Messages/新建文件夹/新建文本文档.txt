@@ -1,0 +1,56 @@
+  public void RebarSummaryTable()
+    {
+        SetButtonNormal();
+           table = transform.GetComponentInChildren<Table>();
+        table.ResetTable();
+        table.AddTextColumn("序号").horAlignment = Column.HorAlignment.CENTER;
+        table.AddTextColumn("料牌编号").horAlignment = Column.HorAlignment.CENTER;
+        table.AddTextColumn("钢筋规格").horAlignment = Column.HorAlignment.CENTER;
+        table.AddTextColumn("钢筋形状").horAlignment = Column.HorAlignment.CENTER;
+        table.AddTextColumn("断料长度（mm）").horAlignment = Column.HorAlignment.CENTER;
+        table.AddTextColumn("总数（根）").horAlignment = Column.HorAlignment.CENTER;
+        table.AddTextColumn("总重（kg）").horAlignment = Column.HorAlignment.CENTER;
+        table.AddTextColumn("备注").horAlignment = Column.HorAlignment.CENTER;
+
+        table.Initialize();
+
+        var datas = _myRebars.OrderBy(a => int.Parse(a.Name.Split(' ')[0])).GroupBy(myRebar => new { myRebar.Name });
+        int i = 0;
+        int j = 0;
+        foreach (var data in datas)
+        {
+            i++;
+            var items = data.GroupBy(myRebar => new { myRebar.Shape, myRebar.Length });
+            Datum mergeName = Datum.Body(i.ToString());
+            #region 显示合并后的单元格的文字
+            mergeName.elements.Add(data.First().Name);//合并后的名字
+            mergeName.elements.Add("");//料牌编号
+            mergeName.elements.Add(""); //钢筋规格
+            mergeName.elements.Add("");// 钢筋形状
+            mergeName.elements.Add("");// 断料长度（mm）
+            mergeName.elements.Add("");// 总数（根）
+            mergeName.elements.Add("");// 总重（kg）
+            mergeName.elements.Add("");// 备注
+            mergeName.elements[0].color = Color.red;
+            table.data.Add(mergeName);
+
+            #endregion
+            foreach (var item in items)
+            {
+                i++;
+                j++;
+                Datum rows = Datum.Body(i.ToString());
+                rows.elements.Add(j.ToString());//序号
+                rows.elements.Add(item.First().CardNum);//料牌编号
+                rows.elements.Add(item.First().Name);//钢筋规格
+                rows.elements.Add(item.First().Shape);//钢筋形状
+                rows.elements.Add(item.First().Length.ToString());//断料长度（mm）
+                rows.elements.Add(item.Sum(a => a.Quantity).ToString());//总数（根）
+                rows.elements.Add("1");//总重（kg）
+                rows.elements.Add("");//备注
+                table.data.Add(rows);
+            }
+        }
+        table.StartRenderEngine();
+        RebarSummaryBtn.GetComponent<Image>().enabled = true;
+    }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Newtonsoft.Json;
+using System.IO;
 
 public static class JsonExtensions
 {
@@ -36,6 +37,35 @@ public static class JsonExtensions
         Dictionary<TKey, TValue> jsonDict = JsonConvert.DeserializeObject<Dictionary<TKey, TValue>>(jsonStr);
 
         return jsonDict;
+    }
 
+    public static string SerializeObject(object o)
+    {
+        string json = JsonConvert.SerializeObject(o);
+        return json;
+    }
+
+    public static T DeserializeJsonToObject<T>(string json) where T : class
+    {
+        JsonSerializer serializer = new JsonSerializer();
+        StringReader sr = new StringReader(json);
+        object o = serializer.Deserialize(new JsonTextReader(sr), typeof(T));
+        T t = o as T;
+        return t;
+    }
+
+    public static List<T> DeserializeJsonToList<T>(string json) where T : class
+    {
+        JsonSerializer serializer = new JsonSerializer();
+        StringReader sr = new StringReader(json);
+        object o = serializer.Deserialize(new JsonTextReader(sr), typeof(List<T>));
+        List<T> list = o as  List<T>;
+        return list;
+    }
+
+    public static T DeserializeAnoymousType<T>(string json,T anoymousTypeObject)
+    {
+        T t = JsonConvert.DeserializeAnonymousType(json, anoymousTypeObject);
+        return t;
     }
 }

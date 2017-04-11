@@ -164,6 +164,7 @@
     <Compile Include="Assets\Plugins\Editor\FingerGestures\TwistRecognizerInspector.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
     <None Include="Assets\Plugins\FingerGestures\Readme.txt" />
     <None Include="Assets\Resources\38XML\38#结构模型.xml" />
     <None Include="Assets\Resources\38XML\38#结构模型模型信息.xml" />
@@ -173,6 +174,7 @@
     <None Include="Assets\Resources\Materials\BVShader.shader" />
     <None Include="Assets\Resources\Materials\BVShader2.shader" />
     <None Include="Assets\Resources\Materials\BVShader3.shader" />
+    <None Include="Assets\Resources\国标清单2013.xml" />
     <None Include="Assets\SLS\Widgets\Table\ReadMe.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

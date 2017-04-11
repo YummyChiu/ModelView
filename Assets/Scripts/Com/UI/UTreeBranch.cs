@@ -21,8 +21,9 @@ namespace Com.UI {
         public Action<UTreeNodeData, bool> OnBranchSel;
 
         public UTreeBranch() {
-            go = GameObject.Instantiate(Resources.Load("Prefabs/treeBranch", typeof(GameObject))) as GameObject;
-            
+            go = GameObject.Instantiate(Resources.Load("Prefabs/Branch", typeof(GameObject))) as GameObject;
+           // go = GameObject.Instantiate(Resources.Load("Prefabs/treeBranch", typeof(GameObject))) as GameObject;
+
             tran = go.transform;
             
             tran.localScale = new Vector3(1,1,1);
@@ -96,7 +97,7 @@ namespace Com.UI {
             //} else {
             //    Debug.Log(" Nbranch " + data.Title);
             //}
-            Debug.Log(" branch :" + data.Title + isSel);
+            //Debug.Log(" branch :" + data.Title + isSel);
             isInvokeInner = false;
             // data.Check = isSel;
             toggle.isOn = isSel;

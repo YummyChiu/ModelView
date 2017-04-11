@@ -11,10 +11,11 @@ public class UILogin : TTUIPage {
 
     InputField mIptUser;
     InputField mIptPassword;
+    InputField mIp;
     Button mBtnLogin;
     Button mBtnQuit;
     string url = "";
-    string action = "Account/LoginTest?";
+    string action = "Login/LoginTest?";
 
 
     public UILogin() : base(UIType.Normal, UIMode.HideOther, UICollider.None)
@@ -27,6 +28,8 @@ public class UILogin : TTUIPage {
         //base.Awake(go);
         mIptUser = this.transform.Find("Panel/UserName").GetComponent<InputField>();
         mIptPassword = this.transform.Find("Panel/Password").GetComponent<InputField>();
+        mIp = this.transform.Find("Panel/Ip").GetComponent<InputField>();
+
         mBtnLogin = this.transform.Find("Panel/BtnLogin").GetComponent<Button>();
         mBtnQuit = this.transform.Find("Panel/BtnQuit").GetComponent<Button>();
         mBtnLogin.onClick.AddListener(OnLogin);
@@ -41,13 +44,14 @@ public class UILogin : TTUIPage {
     }
     public void OnLogin()
     {
-        Task task = new Task(ConnectWeb());
-        //if (mIptUser.text != string.Empty && mIptPassword.text != string.Empty)
-        //{
-        //    Task task = new Task(ConnectWeb());
-        //}
-        //else
-        //    MessageBox.Show("请输入用户名或者密码！");
+        Tools.WebUrl = mIp.text;
+        //Task task = new Task(ConnectWeb());
+        if (mIptUser.text != string.Empty && mIptPassword.text != string.Empty)
+        {
+            Task task = new Task(ConnectWeb());
+        }
+        else
+            MessageBox.Show("请输入用户名或者密码！");
         // MessageBox.Show("Helloworld");
     }
 
@@ -55,7 +59,9 @@ public class UILogin : TTUIPage {
     IEnumerator ConnectWeb()
     {
         //string requesturl = url + "name=" + mIptUser.text + "&" + "pwd=" + mIptPassword.text;
-       string requesturl = url + "name=" + "2507295011@qq.com" + "&" + "pwd=" + "Running@10km";
+        string requesturl = Tools.WebUrl+action + "name=" + mIptUser.text + "&" + "pwd=" + mIptPassword.text;
+        //string requesturl = url + "name=" + mIptUser.text + "&" + "pwd=" + mIptPassword.text;
+
         WWW data = new WWW(requesturl);
         yield return data;
         if (data.error == null)

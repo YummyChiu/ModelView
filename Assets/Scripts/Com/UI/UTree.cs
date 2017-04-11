@@ -19,7 +19,7 @@ namespace Com.UI
         public RectTransform content;
         public VerticalLayoutGroup layerOutGroup;
 
-        void Start()
+        void Awake()
         {
             _leafPool = new List<UTreeLeaf>();
             _branchPool = new List<UTreeBranch>();

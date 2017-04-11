@@ -139,7 +139,7 @@ public class UIFilesPanel : TTUIPage
         internetFilesTable.AddTextColumn("文件名", null, 250);
         internetFilesTable.AddTextColumn("文件大小", null, 160);
         internetFilesTable.AddTextColumn("修改日期", null, 240);
-        internetFilesTable.AddImageColumn("文件状态", null, 50);
+        internetFilesTable.AddImageColumn("文件状态", null, 80);
 
         internetFilesTable.Initialize(OnCellSelected, spriteDict);
         internetFilesTable.StartRenderEngine();
@@ -154,6 +154,7 @@ public class UIFilesPanel : TTUIPage
         int col = column.idx;
         if (col == 4 && internetFilesTable.data[row - 1].elements[col].value != ((int)(ResourceStatus.DOWNLOADED)).ToString())
         {
+            MessageBox.Show("Start To download");
             Debug.Log("icon" + internetFilesTable.data[row - 1].elements[col].value);
             Debug.Log("row:" + row + "col:" + col);
             Resource file = datum.rawObject as Resource;
@@ -234,6 +235,7 @@ public class UIFilesPanel : TTUIPage
     IEnumerator WaitRequest(Resource file, int row, int col)
     {
         string url = Tools.WebUrl + file.FilePath;
+        Debug.Log(url);
         WWW data = new WWW(url);
         yield return data;
         if (data.error == null)
@@ -244,7 +246,7 @@ public class UIFilesPanel : TTUIPage
 
                 byte[] f = data.bytes;
                 int length = f.Length;
-                CreatFile(Tools.Instance.SavedPath + "//" + Tools.BaseFolder + "//" + Tools.FilesFolder, file.FileName, f, length);
+                CreatFile(Tools.Instance.SavedPath + "/" + Tools.BaseFolder + "/" + Tools.FilesFolder, file.FileName, f, length);
                 internetFilesTable.data[row].elements[col].value = ((int)ResourceStatus.DOWNLOADED).ToString();
 
             }
@@ -255,10 +257,10 @@ public class UIFilesPanel : TTUIPage
         }
     }
 
-    void CreatFile(string path, string name, byte[] info, int length)
+   public  void CreatFile(string path, string name, byte[] info, int length)
     {
         Stream sw;
-        FileInfo fi = new FileInfo(path + "//" + name);
+        FileInfo fi = new FileInfo(path + "/" + name);
         if (!fi.Exists)
         {
             sw = fi.Create();

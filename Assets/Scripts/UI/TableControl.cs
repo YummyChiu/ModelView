@@ -30,6 +30,37 @@ public class TableControl : MonoBehaviour
         LoadDatas();
     }
 
+
+    public void Load(List<CountNum> list)
+    {
+        table = transform.GetComponentInChildren<Table>();
+
+        table.ResetTable();
+        table.AddTextColumn("序号");
+        table.AddTextColumn("项目编码");
+        table.AddTextColumn("项目名称");
+        table.AddTextColumn("项目特征");
+        table.AddTextColumn("计量单位");
+        table.AddTextColumn("工程量");
+        table.Initialize();
+        int i = 0;
+        foreach (var item in list)
+        {
+            i++;
+            Datum d = Datum.Body(i.ToString());
+            d.elements.Add(i.ToString());//序号
+            d.elements.Add(item.ProjectNum);//项目编码
+            d.elements.Add(item.ProjectName);//项目名称
+            d.elements.Add(item.ProjectFeature);//项目特征
+            d.elements.Add(item.ProjectUnit);//计量单位
+            d.elements.Add(item.ProjectQuantities);//工程量
+            table.data.Add(d);
+        }
+
+        table.StartRenderEngine();
+
+
+    }
     public void LoadDatas()
     {
         Stopwatch sw = new Stopwatch();
@@ -235,21 +266,31 @@ public class TableControl : MonoBehaviour
         table.StartRenderEngine();
     }
 
-    public class CountNum
-    {
-        public string ProjectFeature { get; internal set; }
-        public string ProjectName
-        {
-            get; set;
-        }
-        public string ProjectNum
-        {
-            get; set;
-        }
-        public string ProjectQuantities { get; internal set; }
-        public string ProjectUnit { get; internal set; }
-    }
+
+   
+}
+public class DBCount
+{
+    public string Code { get; set; }
+    public string ProjectName { get; set; }
+    public string Detail { get; set; }
+    public string Unit { get; set; }
+    public double Quantity { get; set; }
 }
 
+public class CountNum
+{
+    public string ProjectFeature { get; internal set; }
+    public string ProjectName
+    {
+        get; set;
+    }
+    public string ProjectNum
+    {
+        get; set;
+    }
+    public string ProjectQuantities { get; internal set; }
+    public string ProjectUnit { get; internal set; }
+}
 
 
